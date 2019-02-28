@@ -347,6 +347,17 @@ kubectl create -f my-crontab.yaml
 crontab "my-new-cron-object" created
 ```
 
+### Publish CRD OpenAPI
+
+{{< feature-state state="alpha" for_kubernetes_version="1.14" >}}
+
+You can enable this feature using the `CustomResourcePublishOpenAPI` feature gate on
+the [kube-apiserver](/docs/admin/kube-apiserver):
+
+```
+--feature-gates=CustomResourcePublishOpenAPI=true
+```
+
 ### Additional printer columns
 
 Starting with Kubernetes 1.11, kubectl uses server-side printing. The server decides which
