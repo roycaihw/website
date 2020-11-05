@@ -200,6 +200,8 @@ If the access URLs of the restored cluster is changed from the previous cluster,
 
 If the majority of etcd members have permanently failed, the etcd cluster is considered failed. In this scenario, Kubernetes cannot make any changes to its current state. Although the scheduled pods might continue to run, no new pods can be scheduled. In such cases, recover the etcd cluster and potentially reconfigure Kubernetes API server to fix the issue.
 
+You should restart all Kubernetes system components after restoring the etcd cluster.
+
 ## Upgrading and rolling back etcd clusters
 
 As of Kubernetes v1.13.0, etcd2 is no longer supported as a storage backend for
